@@ -1,0 +1,28 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g-elv-tr-100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2451FF"/>
+      <stop offset="100%" stop-color="#6E3CFF"/>
+    </linearGradient>
+    <pattern id="dots-g-elv-tr-100" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="rgba(255,255,255,0.10)"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#g-elv-tr-100)"/>
+  <rect width="400" height="300" fill="url(#dots-g-elv-tr-100)"/>
+  
+  <!-- shaft -->
+  <rect x="150" y="40" width="100" height="220" rx="6" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <!-- cables -->
+  <line x1="170" y1="10" x2="170" y2="40" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  <line x1="200" y1="10" x2="200" y2="40" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  <line x1="230" y1="10" x2="230" y2="40" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  <!-- cab -->
+  <rect x="162" y="120" width="76" height="90" rx="3" fill="rgba(255,255,255,0.92)"/>
+  <line x1="200" y1="120" x2="200" y2="210" stroke="#2451FF" stroke-width="3"/>
+  <!-- indicator lamp -->
+  <circle cx="200" cy="60" r="7" fill="#FFC93C"/>
+  <!-- floor indicator arrows -->
+  <path d="M188 95 L200 82 L212 95" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188 235 L200 248 L212 235" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
