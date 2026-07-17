@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechElec Supply | Mechanical &amp; Electrical Appliances</title>
+<meta name="description" content="MechElec Supply provides elevators, fans, AC systems, lighting and switchboard modules for commercial construction projects.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================= HEADER / NAV ============================= -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="#home" class="brand"><span class="brand-mark"></span>MECHELEC<br><small>Supply</small></a>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#policy">Shipping &amp; Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </button>
+      <a href="#contact" class="btn btn-ghost">Request Quote</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">M&amp;E Supply · Construction Grade</div>
+      <h1>Mechanical &amp; electrical equipment, specified right the first time.</h1>
+      <p class="lead">MechElec Supply provides elevators, ventilation, climate control, lighting and switchboard modules to contractors and developers — with spec sheets built for procurement, not marketing.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Browse Catalog</a>
+        <a href="#contact" class="btn btn-ghost">Talk to an Engineer</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>5</strong><span>Product Categories</span></div>
+        <div><strong>20+</strong><span>Catalog SKUs</span></div>
+        <div><strong>IEC</strong><span>Compliant Modules</span></div>
+      </div>
+    </div>
+    <div class="hero-plate">
+      <div class="hero-plate-head"><span>LIVE SPEC — ELV-MRL-80</span><span class="dot"></span></div>
+      <div class="row"><span>Type</span><b>Machine-Room-Less</b></div>
+      <div class="row"><span>Capacity</span><b>800 kg</b></div>
+      <div class="row"><span>Speed</span><b>1.5 m/s</b></div>
+      <div class="row"><span>Shaft footprint</span><b>Reduced</b></div>
+      <div class="row"><span>Lead time</span><b>6–8 weeks</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CATEGORY GRID ============================= -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Catalog</div>
+      <h2>Five categories, one supplier</h2>
+      <p>Click a category to jump straight to a filtered view of the catalog below.</p>
+    </div>
+    <div class="grid grid-4" id="category-grid"><!-- rendered by renderCategories() --></div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ============================= -->
+<section id="about">
+  <div class="container hero-grid" style="align-items:flex-start;">
+    <div>
+      <div class="eyebrow">About Us</div>
+      <h2>Equip construction projects without the guesswork</h2>
+      <p>MechElec Supply provides elevators, ventilation, climate control, lighting and switchgear to commercial construction projects, with every SKU documented to the standard procurement teams actually need — rated capacity, compliance standard, and lead time up front.</p>
+      <div class="grid grid-3" style="margin-top:24px;">
+        <div class="info-card"><span class="num">01</span><h3>Standards-matched specs</h3><p>Every module is rated against IEC/local building-code standards.</p></div>
+        <div class="info-card"><span class="num">02</span><h3>Transparent lead times</h3><p>Stock levels and lead times are shown up front, not hidden behind a quote request.</p></div>
+        <div class="info-card"><span class="num">03</span><h3>Site-ready support</h3><p>Our engineers review your load requirements before a unit ships.</p></div>
+      </div>
+    </div>
+    <div class="hero-plate hero-plate-light">
+      <div class="hero-plate-head" style="color:var(--ink);"><span>COMPANY FILE</span><span class="dot"></span></div>
+      <div class="row"><span>Founded</span><b>2019</b></div>
+      <div class="row"><span>HQ</span><b>Kuala Lumpur, MY</b></div>
+      <div class="row"><span>Categories supplied</span><b>5</b></div>
+      <div class="row"><span>Compliance</span><b>IEC 61439</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PRODUCTS ============================= -->
+<section class="section-alt" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Catalog</div>
+      <h2>Product Catalog</h2>
+    </div>
+    <div class="toolbar">
+      <div class="filter-bar" id="filter-bar"><!-- rendered by renderFilterChips() --></div>
+      <input type="search" class="search-input" id="search-input" placeholder="Search by name or code…">
+    </div>
+    <p class="result-count" id="result-count"></p>
+    <div class="grid grid-4" id="product-grid"><!-- rendered by renderProducts() --></div>
+    <p id="empty-state" class="empty-state" hidden>No products match your filter. Try a different category or search term.</p>
+  </div>
+</section>
+
+<!-- ============================= SERVICES ============================= -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2>End-to-end M&amp;E procurement support</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="info-card"><span class="num">01</span><h3>Spec &amp; Load Consultation</h3><p>Engineers review your plans and load requirements before you commit to a quote.</p></div>
+      <div class="info-card"><span class="num">02</span><h3>Custom Quotation</h3><p>Itemised, per-SKU pricing with lead time for every line.</p></div>
+      <div class="info-card"><span class="num">03</span><h3>Site Delivery &amp; Coordination</h3><p>Delivery scheduled around your site's access windows.</p></div>
+      <div class="info-card"><span class="num">04</span><h3>Installation Support</h3><p>Technical documentation and on-call support during commissioning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="section-alt" id="faq">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What's the typical lead time on equipment?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Fans, lighting and switchboard modules typically ship in 1–2 weeks. AC systems run 3–5 weeks, and elevators run 6–8 weeks depending on cab configuration.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are your switchboard modules compliant with local building code?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. All modules are rated to IEC 61439 and shipped with compliance documentation for inspection sign-off.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer installation, or supply only?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We supply equipment and provide commissioning support; installation is carried out by your appointed contractor.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What happens if equipment arrives damaged?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Report damage within 48 hours with photos — see the Shipping &amp; Policy section for the full process.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= POLICY ============================= -->
+<section id="policy">
+  <div class="container" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">Shipping &amp; Policy</div>
+      <h2>Shipping &amp; Refund/Exchange Policy</h2>
+    </div>
+    <table class="policy-table">
+      <thead><tr><th>Category</th><th>Standard lead time</th></tr></thead>
+      <tbody>
+        <tr><td>Switchboard Modules</td><td>1–2 weeks</td></tr>
+        <tr><td>Fans &amp; Lighting</td><td>1–3 weeks</td></tr>
+        <tr><td>AC Systems</td><td>3–5 weeks</td></tr>
+        <tr><td>Elevators</td><td>6–8 weeks</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;">Damaged or incorrect items must be reported within 48 hours (damage) or 7 days (wrong item) of delivery. Standard-catalog items may be returned unused within 14 days (15% restocking fee); custom-configured items are non-refundable once fabrication starts. All equipment carries a minimum 12-month warranty.</p>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="section-alt" id="contact">
+  <div class="container hero-grid" style="align-items:flex-start;">
+    <div class="info-card">
+      <h2 class="mt-0">Request a Quote</h2>
+      <p>Tell us about your project and we'll respond within one business day.</p>
+      <form id="contact-form">
+        <div class="form-grid" style="margin-top:20px;">
+          <div><label for="cf-name">Full name</label><input id="cf-name" required></div>
+          <div><label for="cf-email">Email</label><input id="cf-email" type="email" required></div>
+          <div class="full">
+            <label for="cf-category">Category of interest</label>
+            <select id="cf-category">
+              <option>Elevators</option><option>Fans</option><option>AC Systems</option>
+              <option>Lighting</option><option>Switchboard Modules</option>
+            </select>
+          </div>
+          <div class="full"><label for="cf-message">Project details</label><textarea id="cf-message" placeholder="Building type, quantities, timeline…"></textarea></div>
+        </div>
+        <button class="btn btn-primary btn-block" style="margin-top:20px;" type="submit">Send Enquiry</button>
+        <p id="form-success" class="form-success" hidden>Thanks — this is a demo form, so nothing was actually sent. Wire up the fetch() call in submitContactForm() to your backend to go live.</p>
+      </form>
+    </div>
+    <div class="hero-plate hero-plate-light">
+      <div class="hero-plate-head" style="color:var(--ink);"><span>BUSINESS INFO</span><span class="dot"></span></div>
+      <div class="row"><span>Email</span><b>sales@mechelecsupply.example</b></div>
+      <div class="row"><span>Phone</span><b>+60 3-1234 5678</b></div>
+      <div class="row"><span>Hours</span><b>Mon–Fri, 9am–6pm</b></div>
+      <div class="row"><span>Address</span><b>Menara MechElec, Jalan Ampang, KL</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span id="footer-year"></span> MechElec Supply. Academic project — UGBA3473.</span>
+    <span>Kuala Lumpur, Malaysia</span>
+  </div>
+</footer>
+
+<!-- ============================= PRODUCT DETAIL MODAL ============================= -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-body">
+      <span class="product-code" id="modal-code"></span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <ul class="product-specs" id="modal-specs"></ul>
+      <div class="product-foot">
+        <span class="price" id="modal-price"></span>
+        <button class="btn btn-primary" id="modal-add">Add to Quote List</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart-toast" id="cart-toast"></div>
+
+<!-- ============================= CART DRAWER ============================= -->
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-drawer">
+    <div class="cart-head">
+      <h3>Your Quote List</h3>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"><!-- rendered by renderCartDrawer() --></div>
+    <div class="cart-foot">
+      <div class="cart-subtotal"><span>Subtotal</span><b id="cart-subtotal">MYR 0</b></div>
+      <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= CHECKOUT MODAL ============================= -->
+<div class="modal-overlay" id="checkout-overlay">
+  <div class="modal" style="grid-template-columns: 1fr; max-width: 560px;">
+    <button class="modal-close" id="checkout-close" aria-label="Close">✕</button>
+    <div class="checkout-body" id="checkout-body"><!-- rendered by renderCheckout() --></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
